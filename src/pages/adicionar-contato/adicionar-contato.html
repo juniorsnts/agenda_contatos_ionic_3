@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title text-center>Adicionar contato</ion-title>
+    <ion-buttons end>
+      <button [disabled]="contato_form.invalid" icon-only ion-button clear style="font-size: 18px" (click)="concluir()">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="contato-conteiner">
+  <div class="foto-box">
+    <img src="{{foto}}">
+    <ion-icon name="camera"></ion-icon>
+  </div>
+  <form [formGroup]="contato_form">
+    <ion-item>
+      <ion-icon name="person" item-start></ion-icon>
+      <ion-input formControlName="nome" placeholder="Nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-start></ion-icon>
+      <ion-input formControlName="numero" placeholder="Telefone" type="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" item-start></ion-icon>
+      <ion-input formControlName="email" placeholder="Email"></ion-input>
+    </ion-item>
+  </form>
+</ion-content>

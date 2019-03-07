@@ -7,8 +7,19 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  contatos = [];
+
   constructor(public navCtrl: NavController) {
 
   }
 
+  adicionarContato = () => {
+    this.navCtrl.push('AdicionarContatoPage').then(() => {
+      this.navCtrl.getActive().onDidDismiss(data => {
+        if (data) {
+          this.contatos.push(data);
+        }
+      })
+    })
+  }
 }

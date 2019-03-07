@@ -1,14 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="danger">
+    <ion-title text-center>
+      Meu contatos
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-searchbar placeholder="Pesquisar contatos"></ion-searchbar>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrCkEpnb8YXDMAl-lM-3uFgHOTSkecdOU21au9YRysO-4tp5Ul">
+      </ion-avatar>
+      <h2 text-wrap>Junior Santos</h2>
+      <div item-end style="font-size: 22px">
+        <ion-icon name="logo-whatsapp" color="secondary" style="margin-right: 20px" (click)="whatsapp()"></ion-icon>
+        <ion-icon name="mail" color="primary" style="margin-right: 20px" (click)="mensagem()"></ion-icon>
+        <ion-icon color="secondary" name="call" (click)="ligar()"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
+  <button ion-fab style="position: fixed; bottom: 16px; right: 16px" (click)="adicionarContato()">
+    <ion-icon name="person-add"></ion-icon>
+  </button>
 </ion-content>

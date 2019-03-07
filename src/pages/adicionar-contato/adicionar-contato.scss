@@ -1,0 +1,23 @@
+page-adicionar-contato {
+    
+    .foto-box {
+        position: relative;
+        height: 30%;
+        width: 100%;
+        margin-bottom: 20px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        ion-icon {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            font-size: 40px;
+            color: #FFF !important;
+        }
+    }
+
+}
